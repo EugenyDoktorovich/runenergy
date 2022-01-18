@@ -1,0 +1,22 @@
+.wrapper {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 182px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.wrapper:last-child {
+  margin-bottom: 0px;
+}
+
+.element {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.element:hover {
+  background-color: #dcdcdc;
+}

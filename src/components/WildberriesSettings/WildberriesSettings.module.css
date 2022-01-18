@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  background-color: #f5f7fa;
+  border-color: #e4e7ed;
+  color: #c0c4cc;
+  cursor: not-allowed;
+  height: 32px;
+  line-height: 32px;
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid #dcdfe6;
+  box-sizing: border-box;
+  margin-left: 10px;
+  padding-left: 8px;
+}
+
+.idWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 0px;
+}
+
+.apiWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #1d76aa;
+  color: #fff;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 6px;
+  margin-left: 20px;
+}
