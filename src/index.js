@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
 import './index.css';
 
@@ -9,10 +11,48 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 
+/*REDUX ЛОГИКА */
+
+const defaultState = {
+  cash: 0,
+  ozoneId:0,
+  wildberriesId:0,
+  aliexpressId:0,
+  sbermmId:0,
+  yandexmarketId:0,
+  isVisible:false,
+}
+
+
+const reducer = (state = defaultState, action) => {
+  switch (action.type) {
+      case "ADD_OZONE_ID":
+        return {...state, ozoneId: action.id}
+
+      case "ADD_CASH":
+        return {...state, cash: state.cash - action.payload}
+
+    default:
+      return state
+  }
+}
+
+
+const store = createStore(reducer);
+
+
+/*REDUX ЛОГИКА ТУТ ПОКА ЧТО */
+
+
+
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    <Provider store={store}>
     <App />
+    </Provider>
+    
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
