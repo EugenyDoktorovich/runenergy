@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { createStore } from 'redux';
@@ -14,8 +14,8 @@ import reportWebVitals from './reportWebVitals';
 /*REDUX ЛОГИКА */
 
 const defaultState = {
-  cash: 0,
-  ozoneId:0,
+  cash: '',
+  ozoneId:'',
   wildberriesId:0,
   aliexpressId:0,
   sbermmId:0,
@@ -27,7 +27,7 @@ const defaultState = {
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
       case "ADD_OZONE_ID":
-        return {...state, ozoneId: action.id}
+        return {...state, ozoneId: state.ozoneId = action.information}
 
       case "ADD_CASH":
         return {...state, cash: state.cash - action.payload}
