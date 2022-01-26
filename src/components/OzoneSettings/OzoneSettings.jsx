@@ -22,7 +22,7 @@ function OzoneSettings() {
     }
     let information = '';
     const showInput = (event)=>{
-         information= event.target.value;
+         information = event.target.value;
          
     }
     

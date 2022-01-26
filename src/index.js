@@ -20,7 +20,7 @@ const defaultState = {
   aliexpressId:0,
   sbermmId:0,
   yandexmarketId:0,
-  isVisible:false,
+  active:false,
 }
 
 
@@ -31,6 +31,12 @@ const reducer = (state = defaultState, action) => {
 
       case "ADD_CASH":
         return {...state, cash: state.cash - action.payload}
+
+      case "SET_ACTIVE":
+        return {...state,active:true}
+
+        case "SET_DISACTIVE":
+          return {...state,active:false}
 
     default:
       return state
