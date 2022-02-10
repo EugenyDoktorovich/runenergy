@@ -6,7 +6,7 @@ import classes from './Yandexmarket.module.css';
 
 function Yandexmarket() {
     return (
-        <Link to="/yandexmarketsettings" className={classes.marketPlaceRefButton}>
+        <Link to="/forauthuser/yandexmarketsettings" className={classes.marketPlaceRefButton}>
             <img src={logo} alt="logo"></img>
             <div className={classes.yandexmarketInteger}>3367</div>
         </Link>

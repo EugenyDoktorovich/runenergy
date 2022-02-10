@@ -28,7 +28,6 @@ function OzoneSettings() {
     
     return (
         <div className={classes.wrapper}>
-            <button className={classes.addMagazine}>Добавить магазин</button>
             <div className={classes.idWrapper}>
                 <div>Seller ID</div>
                 <input type="text" className={classes.input} onInput={showInput} ref={textIput}></input>

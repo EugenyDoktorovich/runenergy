@@ -1,22 +1,40 @@
 import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
+import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
+import Loginpage from './components/Loginpage/Loginpage';
+import ForAuthUser from './components/ForAuthUser/ForAuthUser';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 
 function App() {
+  const [auth, setAuth] = useState(false);
+  const navigate = useNavigate();
 
-  /*REDUX */
+  const login = () => {
+    setAuth(true);
+    navigate('/forauthuser');
+  }
 
+  const logout = () =>{
+    setAuth(false);
+    navigate('/');
+  }
   
-  /*REDUX */
   
 
   return (
     <div className="App">
-      <Header/>
-      <Main/>
+      <Routes>
+        <Route path ='/' element={<Loginpage loginHandler={login}/>}/>
+        <Route element={<PrivateRoute auth={auth}/>}>
+          <Route path ='/forauthuser/*' element={<ForAuthUser loginHandler={logout}/>}/>
+        </Route>
+      </Routes>
     </div>
   );
 }

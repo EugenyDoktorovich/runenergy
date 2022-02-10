@@ -10,7 +10,7 @@ function Ozone() {
     const ozoneId = useSelector(state=>state.ozoneId);
 
     return (
-        <Link to="/ozonesettings" className={classes.marketPlaceRefButton}>
+        <Link to="ozonesettings" className={classes.marketPlaceRefButton}>
             <img src={logo} alt="logo"></img>
             <div className={classes.sbermmInteger}>{ozoneId}</div>
         </Link>

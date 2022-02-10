@@ -42,3 +42,11 @@
   border-radius: 6px;
   margin-left: 20px;
 }
+
+.addMagazine{
+  width: 90px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #1d76aa;
+  color: #fff;
+}

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Sbermm() {
     return (
-        <Link to="/sbermmsettings" className={classes.marketPlaceRefButton}>
+        <Link to="/forauthuser/sbermmsettings" className={classes.marketPlaceRefButton}>
             <img src={logo} alt="logo"></img>
             <div className={classes.sbermmInteger}>3367</div>
         </Link>

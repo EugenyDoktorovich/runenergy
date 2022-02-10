@@ -9,7 +9,7 @@ import classNames from 'classnames';
 
 function Wildberries() {
     return (
-        <Link to="/wildberriessettings" className={classes.marketPlaceRefButton}>
+        <Link to="/forauthuser/wildberriessettings" className={classes.marketPlaceRefButton}>
             <img src={logo} alt="logo"></img>
             <div className={classes.wildberriesInteger}>5489</div>
         </Link>

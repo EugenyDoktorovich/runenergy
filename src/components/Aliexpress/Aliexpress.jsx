@@ -6,7 +6,7 @@ import classes from './Aliexpress.module.css';
 
 function Aliexpress() {
     return (
-        <Link to="/aliexpresssettings" className={classes.marketPlaceRefButton}>
+        <Link to="/forauthuser/aliexpresssettings" className={classes.marketPlaceRefButton}>
             <img src={logo} alt="logo"></img>
             <div className={classes.aliexpressInteger}>1278</div>
         </Link>
