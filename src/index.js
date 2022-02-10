@@ -14,13 +14,17 @@ import reportWebVitals from './reportWebVitals';
 /*REDUX ЛОГИКА */
 
 const defaultState = {
-  cash: '',
   ozoneId:'',
+
   wildberriesId:0,
   aliexpressId:0,
   sbermmId:0,
   yandexmarketId:0,
+
   active:false,
+  
+  ozoneMagazinesData : [],
+  
 }
 
 
@@ -29,14 +33,16 @@ const reducer = (state = defaultState, action) => {
       case "ADD_OZONE_ID":
         return {...state, ozoneId: state.ozoneId = action.information}
 
-      case "ADD_CASH":
-        return {...state, cash: state.cash - action.payload}
-
       case "SET_ACTIVE":
         return {...state,active:true}
 
-        case "SET_DISACTIVE":
+      case "SET_DISACTIVE":
           return {...state,active:false}
+      
+      case "PUSH_OZONE_MAGAZINE":
+          return {...state, ozoneMagazinesData:[...state.ozoneMagazinesData, action.data]}
+
+      
 
     default:
       return state
@@ -45,6 +51,7 @@ const reducer = (state = defaultState, action) => {
 
 
 const store = createStore(reducer);
+const unsubscribe = store.subscribe(() => console.log(store.getState()));
 
 
 /*REDUX ЛОГИКА ТУТ ПОКА ЧТО */

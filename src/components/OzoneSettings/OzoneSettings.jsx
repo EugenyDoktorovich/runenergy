@@ -1,43 +1,42 @@
 import React from "react";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Route, Routes, Link } from "react-router-dom";
+
 
 
 import classes from './OzoneSettings.module.css';
 
+import SellerIdSettings from "../SellerIdSettings/SellerIdSettings";
+import MagazineMenu from "../MagazineMenu/MagazineMenu";
+
 /* <button  className={classes.button} onClick={addOzoneID}>{disabled !== null ? "Редактировать параметры" : "Сохранить"}</button> */
 
+
+
 function OzoneSettings() {
-   
+    const ozoneMagazines = useSelector(state=>state.ozoneMagazinesData);
+    
 
-    const dispatch = useDispatch();
-
-    const ozoneId = useSelector(state=>state.ozoneId);
-
-    let textIput = React.createRef();
-
-    const addOzoneID = () => {
-        dispatch({type:'ADD_OZONE_ID', information:information});
-        textIput.current.value='';
-    }
-    let information = '';
-    const showInput = (event)=>{
-         information = event.target.value;
-         
-    }
+    
     
     return (
         <div className={classes.wrapper}>
-            <button className={classes.addMagazine}>Добавить магазин</button>
-            <div className={classes.idWrapper}>
-                <div>Seller ID</div>
-                <input type="text" className={classes.input} onInput={showInput} ref={textIput}></input>
-            </div>
-            <div className={classes.apiWrapper}>
-                <div>API - key, ключ, токен</div>
-                <button  className={classes.button} onClick={addOzoneID}>Редактировать</button>
-                <input disabled="true" className={classes.input} type="text"></input>
-            </div>
+            <div>
+                {(ozoneMagazines.length!=0) && ozoneMagazines.map(id =>{
+                    return <Link to={`${id}`}><button className={classes.addMagazine}>{id}</button></Link> 
+                })}
+                <Link to="addmagazine"><button className={classes.addMagazine}>Добавить магазин</button></Link>
+                 </div> 
+
+
+            <Routes>
+            {(ozoneMagazines.length!=0) && ozoneMagazines.map(id =>{
+                    return <Route path={`${id}`} element={<MagazineMenu/>}/>
+                })}
+                <Route path="addmagazine" element={<SellerIdSettings/>}/>
+            </Routes>
+            
         </div>
     )
 }

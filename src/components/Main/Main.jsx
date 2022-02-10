@@ -14,7 +14,7 @@ function Main() {
         <div className={classes.main}>
             <Routes>
                 <Route path="/" element={<Zaglushka/>}/>
-                <Route path="/ozonesettings" element={<OzoneSettings/>}/>
+                <Route path="/ozonesettings/*" element={<OzoneSettings/>}/>
                 <Route path="/wildberriessettings" element={<WildberriesSettings/>}/>
             </Routes>
             <UserDropDownMenu/>

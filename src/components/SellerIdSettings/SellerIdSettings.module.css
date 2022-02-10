@@ -1,7 +1,6 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 .input {
@@ -50,4 +49,29 @@
   padding: 10px;
   background-color: #1d76aa;
   color: #fff;
+}
+
+.firstStep {
+  display: flex;
+  flex-direction: column;
+}
+
+.firstStep.active {
+  display: none;
+}
+
+.secondStep {
+  display: none;
+}
+
+.secondStep.active {
+  display: flex;
+}
+
+.thirdStep {
+  display: none;
+}
+
+.thirdStep.active {
+  display: flex;
 }
