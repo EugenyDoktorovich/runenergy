@@ -32,7 +32,7 @@ function OzoneSettings() {
 
             <Routes>
             {(ozoneMagazines.length!=0) && ozoneMagazines.map(id =>{
-                    return <Route path={`${id}`} element={<MagazineMenu/>}/>
+                    return <Route path={`${id}/*`} element={<MagazineMenu/>}/>
                 })}
                 <Route path="addmagazine" element={<SellerIdSettings/>}/>
             </Routes>

@@ -25,7 +25,14 @@ function App() {
     navigate('/');
   }
   
-  
+  const urlMS ="https://online.moysklad.ru/api/remap/1.2/security/token";
+  fetch({
+    urlMS,
+      method:"POST",
+      headers: {
+        'Authorization' : 'aXRAcnVuZW5lcmd5Ojg5MTc5MDIxNjU2'
+      },
+    }).then(response=>console.log(response));
 
   return (
     <div className="App">
