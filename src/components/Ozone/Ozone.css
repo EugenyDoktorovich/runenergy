@@ -1,0 +1,23 @@
+.marketPlaceRefButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    color: rgb(124, 124, 124);
+    font-size: 20px;
+    margin-left: 20px;
+    padding-top: 25px;
+    width: 60px;
+    height: 70px;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .marketPlaceRefButton:hover {
+    background-color: #17577c;
+  }
+  
+  .marketPlaceRefButton.active{
+    color: white;
+    font-size: 50;
+  }
+  

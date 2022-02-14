@@ -1,7 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from 'react-router-dom';
 
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 
 import classes from './SellerIdSettings.module.css';
@@ -9,7 +12,7 @@ import classes from './SellerIdSettings.module.css';
 /* <button  className={classes.button} onClick={addOzoneID}>{disabled !== null ? "Редактировать параметры" : "Сохранить"}</button> */
 
 function SellerIdSettings() {
-   
+   const navigate = useNavigate();
  /* Логика диспатча для отображения ozonid у Link */
     const dispatch = useDispatch();
 
@@ -22,7 +25,11 @@ function SellerIdSettings() {
 
 
     const pushOzoneMagazine = () => {
+        if(!newMagazineInfo){
+            return
+        }
         dispatch({type:'PUSH_OZONE_MAGAZINE',data:newMagazineInfo});
+        navigate(`/forauthuser/ozonesettings/${newMagazineInfo}`)
         textIput.current.value='';
     }
 
@@ -33,7 +40,7 @@ function SellerIdSettings() {
 
     
 
-    /* Попытка сделать через хук в обход редакс */
+    /* Через хук в обход редакс */
     const firstClick = () => {
         pushOzoneMagazine();
         setFirst(false);
@@ -49,6 +56,7 @@ function SellerIdSettings() {
     const thirdClick = () => {
         setFirst(true);
         setThird(false);
+        
     }
 
 
@@ -59,6 +67,7 @@ function SellerIdSettings() {
     const [first,setFirst] = useState(true);
     const [second,setSecond] = useState(false);
     const [third,setThird] = useState(false);
+    
     return (
         <div className={classes.wrapper}>
             <div className={first?classes.firstStep:firstDisactive}>
@@ -68,7 +77,7 @@ function SellerIdSettings() {
                 </div>
                 <div className={classes.apiWrapper}>
                     <div>API - key, ключ, токен</div>
-                    <button  className={classes.button} onClick={firstClick}>Редактировать</button>
+                    <Button variant="contained"  className={classes.button} onClick={firstClick}>Редактировать</Button>
                     <input disabled="true" className={classes.input} type="text"></input>
                 </div>
             </div>

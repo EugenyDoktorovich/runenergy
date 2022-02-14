@@ -15,3 +15,8 @@
 .marketPlaceRefButton:hover {
   background-color: #17577c;
 }
+
+.marketPlaceRefButton.active{
+  color: black;
+  font-size: 50;
+}

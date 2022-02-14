@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../img/ozone.png";
-import classes from './Ozone.module.css';
-import { Routes, Route, Link } from 'react-router-dom';
+import './Ozone.css';
+import { Routes, Route, NavLink } from 'react-router-dom';
 import { useSelector } from "react-redux";
 
 
@@ -10,10 +10,11 @@ function Ozone() {
     
 
     return (
-        <Link to="ozonesettings" className={classes.marketPlaceRefButton}>
-            <img src={logo} alt="logo"></img>
-            <div className={classes.sbermmInteger}></div>
-        </Link>
+        <NavLink to="ozonesettings" className={({ isActive }) =>
+        isActive ? 'marketPlaceRefButton active' : 'marketPlaceRefButton'
+      }>
+            Ozone
+        </NavLink>
     )
 }
 
