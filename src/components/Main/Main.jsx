@@ -9,7 +9,7 @@ import Zaglushka from "../Zaglushka/Zaglushka";
 
 import UserDropDownMenu from "../UserDropDownMenu/UserDropDownMenu";
 
-function Main() {
+function Main() {  
     return (
         <div className={classes.main}>
             <Routes>
@@ -18,7 +18,7 @@ function Main() {
                 <Route path="/wildberriessettings" element={<WildberriesSettings/>}/>
             </Routes>
             <UserDropDownMenu/>
-            
+                 
         
         </div>
     )

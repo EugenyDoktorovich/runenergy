@@ -1,0 +1,70 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .input {
+    background-color: #cfd0d1;
+    border-color: #bebec0;
+    color: #c0c4cc;
+    height: 32px;
+    line-height: 32px;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    margin-left: 10px;
+    padding-left: 8px;
+    color: black;
+  }
+  
+  .idWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 97px;
+  }
+  
+  .apiWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .button {
+    background-color: #1d76aa;
+    color: #fff;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 6px;
+    margin-left: 20px;
+  }
+  
+  .addMagazine {
+    width: 90px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #1d76aa;
+    color: #fff;
+    font-weight: 600;
+    
+  }
+  
+  .addMagazineLink{
+    margin-left: 30px;
+  }
+
+  .addMagazineLink.active{
+      border: solid 3px #fff;
+  }
+  
+  .addedMagazineWrapper{
+    margin-left: 30px;
+  }
+  
+ 
+  

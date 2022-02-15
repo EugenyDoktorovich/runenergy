@@ -50,4 +50,19 @@
   padding: 10px;
   background-color: #1d76aa;
   color: #fff;
+  font-weight: 600;
+  
 }
+
+.addMagazineLink{
+  margin-left: 30px;
+}
+
+.addedMagazineWrapper{
+  margin-left: 30px;
+}
+
+.addedMagazineWrappe.active{
+  border-bottom: #fff;
+}
+

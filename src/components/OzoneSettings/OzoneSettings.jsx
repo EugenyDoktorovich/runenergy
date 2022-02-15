@@ -3,6 +3,8 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Route, Routes, Link } from "react-router-dom";
 
+import Button from '@mui/material/Button';
+
 
 
 import classes from './OzoneSettings.module.css';
@@ -24,9 +26,9 @@ function OzoneSettings() {
         <div className={classes.wrapper}>
             <div>
                 {(ozoneMagazines.length!=0) && ozoneMagazines.map(id =>{
-                    return <Link to={`${id}`}><button className={classes.addMagazine}>{id}</button></Link> 
+                    return <Link to={`${id}`} className={classes.adedMagazineWrapper}><Button variant="contained" className={classes.addMagazine}>{id}</Button></Link> 
                 })}
-                <Link to="addmagazine"><button className={classes.addMagazine}>Добавить магазин</button></Link>
+                <Link  to="addmagazine" className={classes.addMagazineLink}><Button variant="contained" className={classes.addMagazine}>Добавить магазин</Button></Link>
                  </div> 
 
 

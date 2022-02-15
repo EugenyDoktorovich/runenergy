@@ -83,11 +83,11 @@ function SellerIdSettings() {
             </div>
             <div className={second?secondActive:classes.secondStep}>
                 НАСТРОЙКА ТОВАРОВ
-                <button onClick={secondClick}  className={classes.button} >Сохранить</button>
+                <Button variant="contained" onClick={secondClick}  className={classes.button} >Сохранить</Button>
             </div>
             <div className={third?thirdActive:classes.thirdStep}>
                 НАСТРОЙКА ЗАКАЗОВ
-                <button onClick={thirdClick}  className={classes.button} >Сохранить</button>
+                <Button variant="contained" onClick={thirdClick}  className={classes.button} >Сохранить</Button>
             </div>
         </div>
     )
