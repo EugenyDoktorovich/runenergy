@@ -51,8 +51,14 @@
   background-color: #1277d3;
   color: #fff;
   font-weight: 600;
+  margin-left: 40px;
 }
 
 .addMagazine.active {
   background-color: #4faaff;
+  border-bottom: rgb(185, 141, 141) 3px solid;
+}
+
+.addMagazineLink {
+  margin-left: 40px;
 }
