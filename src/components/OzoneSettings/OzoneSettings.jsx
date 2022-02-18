@@ -1,13 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, NavLink } from "react-router-dom";
 
 import Button from '@mui/material/Button';
 
 
 
-import classes from './OzoneSettings.module.css';
+import './OzoneSettings.css';
 
 import SellerIdSettings from "../SellerIdSettings/SellerIdSettings";
 import MagazineMenu from "../MagazineMenu/MagazineMenu";
@@ -23,12 +23,14 @@ function OzoneSettings() {
     
     
     return (
-        <div className={classes.wrapper}>
+        <div className='wrapper'>
             <div>
                 {(ozoneMagazines.length!=0) && ozoneMagazines.map(id =>{
-                    return <Link to={`${id}`} className={classes.adedMagazineWrapper}><Button variant="contained" className={classes.addMagazine}>{id}</Button></Link> 
+                    return <NavLink to={`${id}`}  className={({ isActive }) =>
+                    isActive ? 'addMagazine active' : 'addMagazine'
+                  }>{id}</NavLink> 
                 })}
-                <Link  to="addmagazine" className={classes.addMagazineLink}><Button variant="contained" className={classes.addMagazine}>Добавить магазин</Button></Link>
+                <Link  to="addmagazine" className='addMagazineLink'><Button variant="contained" className='addMagazine'>Добавить магазин</Button></Link>
                  </div> 
 
 
