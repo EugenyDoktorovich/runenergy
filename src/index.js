@@ -22,6 +22,7 @@ const defaultState = {
   yandexmarketId:0,
 
   active:false,
+  succesLoginWindow:false,
   
   ozoneMagazinesData : [],
   wildberriesMagazinesData : [],
@@ -37,12 +38,24 @@ const reducer = (state = defaultState, action) => {
       case "ADD_OZONE_ID":
         return {...state, ozoneId: state.ozoneId = action.information}
 
+
+
       case "SET_ACTIVE":
         return {...state,active:true}
 
       case "SET_DISACTIVE":
           return {...state,active:false}
+
+
+
+      case "SET_SUCCESLOGIN_ACTIVE":
+          return {...state,succesLoginWindow:true}
+
+      case "SET_SUCCESLOGIN_DISACTIVE":
+          return {...state,succesLoginWindow:false}
+          
       
+
       case "PUSH_OZONE_MAGAZINE":
           return {...state, ozoneMagazinesData:[...state.ozoneMagazinesData, action.data]}
 

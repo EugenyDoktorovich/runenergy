@@ -8,6 +8,7 @@ import WildberriesSettings from "../WildberriesSettings/WildberriesSettings"
 import Zaglushka from "../Zaglushka/Zaglushka";
 
 import UserDropDownMenu from "../UserDropDownMenu/UserDropDownMenu";
+import SettingsSuccessWindow from "../SettingsSuccessWindow/SettingsSuccessWindow";
 
 function Main() {  
     return (
@@ -18,6 +19,8 @@ function Main() {
                 <Route path="/wildberriessettings" element={<WildberriesSettings/>}/>
             </Routes>
             <UserDropDownMenu/>
+            <SettingsSuccessWindow/>
+
                  
         
         </div>

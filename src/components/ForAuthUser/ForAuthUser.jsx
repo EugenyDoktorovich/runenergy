@@ -7,7 +7,7 @@ import Main from "../Main/Main";
 
 function ForAuthUser(){
     return (
-        <div>
+        <div className={classes.wrapper} >
             <Header/>
             <Main/>
         </div>

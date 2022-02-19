@@ -1,8 +1,16 @@
-.wrapper{
+.wrapper {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   text-align: center;
   width: 200px;
   height: 50px;
   padding: 5px;
   border: #00ff6a 3px solid;
-  color:green ;
+  color: green;
+}
+
+.wrapper.active {
+  display: block;
 }

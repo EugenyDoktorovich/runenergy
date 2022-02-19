@@ -42,3 +42,14 @@ function OzoneSettings() {
 }
 
 export default OzoneSettings;
+
+
+
+
+
+
+
+
+[ id{sellerId:apiключ},
+id{sellerId:apiключ},
+id{sellerId:apiключ}, ]

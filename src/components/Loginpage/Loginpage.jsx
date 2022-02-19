@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 
 import classes from './Loginpage.module.css';
 
 
+
+
 function Loginpage({loginHandler}){
+
+    const dispatch = useDispatch();
+
+    const active = useSelector(state=>state.succesLoginWindow);
+
+
+
+    const addActive = () => {
+        dispatch({type:"SET_SUCCESLOGIN_ACTIVE", succesLoginWindow:true});
+    }
+
+    const addDisactive = () =>{
+        dispatch({type:"SET_SUCCESLOGIN_DISACTIVE", succesLoginWindow:false});
+    }
+
+    const succesLogin = () => {
+        loginHandler();
+        addActive();
+        setTimeout(addDisactive, 4000);
+    }
+
     return (
         <div className={classes.wrapper}>
             <h1 className={classes.title}>Авторизация</h1>
@@ -12,7 +37,7 @@ function Loginpage({loginHandler}){
                 <input className={classes.firstInput} type="text" />
                 <input className={classes.secondInput} type="text" />
             </form>
-            <button onClick={loginHandler}>ВОЙТИ</button>
+            <button onClick={succesLogin}>ВОЙТИ</button>
         </div>
     )
 }
