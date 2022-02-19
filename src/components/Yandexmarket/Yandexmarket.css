@@ -1,18 +1,15 @@
-.marketPlaceRefButton {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.marketPlaceRefButtonYandex {
   background-color: transparent;
   color: #aaaaaa;
   font-size: 20px;
-
+  margin-right: 60px;
   padding-top: 25px;
   width: 60px;
   height: 70px;
   transition: all 0.5s ease 0s;
 }
 
-.marketPlaceRefButton.active {
+.marketPlaceRefButtonYandex.active {
   color: #fff;
   font-size: 50;
 }

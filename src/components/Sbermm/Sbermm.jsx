@@ -1,14 +1,15 @@
 import React from "react";
-import logo from "../../img/sbermm.png";
-import classes from './Sbermm.module.css';
-import { Link } from "react-router-dom";
+
+import './Sbermm.css';
+import { Link,NavLink } from "react-router-dom";
 
 function Sbermm() {
     return (
-        <Link to="/forauthuser/sbermmsettings" className={classes.marketPlaceRefButton}>
-            <img src={logo} alt="logo"></img>
-            <div className={classes.sbermmInteger}>3367</div>
-        </Link>
+        <NavLink to="/forauthuser/sbermmsettings" className={({ isActive }) =>
+        isActive ? 'marketPlaceRefButtonSberm active' : 'marketPlaceRefButtonSberm'
+      }>
+            Сбермаркет
+        </NavLink>
     )
 }
 

@@ -1,6 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
 }
 
 .input {
@@ -74,4 +75,8 @@
 
 .thirdStep.active {
   display: flex;
+}
+
+.sellerIdPar {
+  color: #1277d3;
 }

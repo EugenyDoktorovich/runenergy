@@ -1,15 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,NavLink } from "react-router-dom";
 
 import logo from "../../img/ali.png";
-import classes from './Aliexpress.module.css';
+import './Aliexpress.css';
 
 function Aliexpress() {
     return (
-        <Link to="/forauthuser/aliexpresssettings" className={classes.marketPlaceRefButton}>
-            <img src={logo} alt="logo"></img>
-            <div className={classes.aliexpressInteger}>1278</div>
-        </Link>
+        <NavLink to="aliexpresssettings" className={({ isActive }) =>
+        isActive ? 'marketPlaceRefButtonAliexpress active' : 'marketPlaceRefButtonAliexpress'
+      }>
+           Aliexpress 
+            
+        </NavLink>
     )
 }
 

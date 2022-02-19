@@ -13,19 +13,19 @@ function MagazineMenu() {
                 <h2 className='settingsH2'>Настройки магазина</h2>
                 <NavLink to="sellerIdpersonal" className={({ isActive }) =>
                     isActive ? 'magazineMenuNavlink active' : 'magazineMenuNavlink'
-                  }>Seller ID, TOKEN</NavLink>
+                  }>&#9658; Seller ID, TOKEN</NavLink>
                 <NavLink to="productsettings" className={({ isActive }) =>
                     isActive ? 'magazineMenuNavlink active' : 'magazineMenuNavlink'
-                  }>Настройка товара</NavLink>
+                  }>&#9658; Настройка товара</NavLink>
                 <NavLink to="ordersettings" className={({ isActive }) =>
                     isActive ? 'magazineMenuNavlink active' : 'magazineMenuNavlink'
-                  }>Настройка заказов</NavLink>
+                  }>&#9658; Настройка заказов</NavLink>
                 <NavLink to="eventlog" className={({ isActive }) =>
                     isActive ? 'magazineMenuNavlink active' : 'magazineMenuNavlink'
-                  }>Журнал событий</NavLink>
+                  }>&#9658; Журнал событий</NavLink>
                 <NavLink to="seal" className={({ isActive }) =>
                     isActive ? 'magazineMenuNavlink active' : 'magazineMenuNavlink'
-                  }>Печать</NavLink>
+                  }>&#9658; Печать</NavLink>
             </div>
             <div className='contentWrapper'>
                 <Routes>

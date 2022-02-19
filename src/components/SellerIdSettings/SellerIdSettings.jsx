@@ -72,11 +72,11 @@ function SellerIdSettings() {
         <div className={classes.wrapper}>
             <div className={first?classes.firstStep:firstDisactive}>
                 <div className={classes.idWrapper}>
-                    <div>Seller ID</div>
+                    <div className={classes.sellerIdPar}>Seller ID</div>
                     <input type="text" className={classes.input} onInput={showInput} ref={textIput}></input>
                 </div>
                 <div className={classes.apiWrapper}>
-                    <div>API - key, ключ, токен</div>
+                    <div className={classes.sellerIdPar}>API - key, ключ, токен</div>
                     <Button variant="contained"  className={classes.button} onClick={firstClick}>Редактировать</Button>
                     <input disabled="true" className={classes.input} type="text"></input>
                 </div>

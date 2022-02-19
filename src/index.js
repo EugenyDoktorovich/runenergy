@@ -24,6 +24,10 @@ const defaultState = {
   active:false,
   
   ozoneMagazinesData : [],
+  wildberriesMagazinesData : [],
+  aliExpressMagazinesData : [],
+  sberMarketMagazinesData : [],
+  yandexMarketMagazinesData : [],
   
 }
 
@@ -41,6 +45,18 @@ const reducer = (state = defaultState, action) => {
       
       case "PUSH_OZONE_MAGAZINE":
           return {...state, ozoneMagazinesData:[...state.ozoneMagazinesData, action.data]}
+
+      case "PUSH_WILDBERRIES_MAGAZINE":
+          return {...state, wildberriesMagazinesData:[...state.wildberriesMagazinesData, action.data]}
+
+      case "PUSH_ALIEXPRESS_MAGAZINE":
+          return {...state, aliExpressMagazinesData:[...state.aliExpressMagazinesData, action.data]}
+
+      case "PUSH_SBERM_MAGAZINE":
+          return {...state, sberMarketMagazinesData:[...state.sberMarketMagazinesData, action.data]}
+
+      case "PUSH_YANDEX_MAGAZINE":
+          return {...state, yandexMarketMagazinesData:[...state.yandexMarketMagazinesData, action.data]}
 
       
 

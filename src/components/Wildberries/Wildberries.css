@@ -1,18 +1,18 @@
-.marketPlaceRefButton {
-  display: flex;
+.marketPlaceRefButtonWildberries {
+  display: block;
   flex-direction: column;
   align-items: center;
   background-color: transparent;
   color: #aaaaaa;
-  font-size: 20px;
-
-  padding-top: 25px;
+  font-size: 12px;
+  padding: 50px;
   width: 60px;
   height: 70px;
   transition: all 0.5s ease 0s;
+  padding-top: 16px;
 }
 
-.marketPlaceRefButton.active {
+.marketPlaceRefButtonWildberries.active {
   color: #fff;
   font-size: 50;
 }
