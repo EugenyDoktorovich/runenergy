@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
+import Button from '@mui/material/Button';
+
 
 import classes from './Loginpage.module.css';
 
@@ -37,7 +39,7 @@ function Loginpage({loginHandler}){
                 <input className={classes.firstInput} type="text" />
                 <input className={classes.secondInput} type="text" />
             </form>
-            <button onClick={succesLogin}>ВОЙТИ</button>
+            <Button variant="contained" onClick={succesLogin}>ВОЙТИ</Button>
         </div>
     )
 }

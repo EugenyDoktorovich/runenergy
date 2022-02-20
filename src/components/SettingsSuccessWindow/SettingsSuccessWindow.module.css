@@ -9,8 +9,10 @@
   padding: 5px;
   border: #00ff6a 3px solid;
   color: green;
+  transition: all 0.5s ease 0s;
 }
 
 .wrapper.active {
   display: block;
+  transition: all 0.5s ease 0s;
 }
