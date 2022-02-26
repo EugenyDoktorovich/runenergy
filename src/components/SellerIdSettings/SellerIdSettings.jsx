@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from 'react-router-dom';
+import nextId from "react-id-generator";
 
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
@@ -19,6 +20,7 @@ function SellerIdSettings() {
     const ozoneId = useSelector(state=>state.ozoneId);
 
     let textIput = React.createRef();
+    let textInputSecond = React.createRef();
 /* ЭТО ПЕРЕЙДЕТ В МАГАЗЫ */
     
     
@@ -38,7 +40,18 @@ function SellerIdSettings() {
         newMagazineInfo = event.target.value;
     }
 
-    
+    let newMagazinInfoSecond = '';
+    const showInputSecond = (event) => {
+        newMagazinInfoSecond = event.target.value;
+    }
+
+
+
+   /*  let nextId() = {
+        id:newMagazineInfo,
+        token:newMagazineInfo
+    }
+     */
 
     /* Через хук в обход редакс */
     const firstClick = () => {
@@ -78,7 +91,7 @@ function SellerIdSettings() {
                 <div className={classes.apiWrapper}>
                     <div className={classes.sellerIdPar}>API - key, ключ, токен</div>
                     <Button variant="contained"  className={classes.button} onClick={firstClick}>Редактировать</Button>
-                    <input disabled="true" className={classes.input} type="text"></input>
+                    <input className={classes.input} onInput={showInputSecond} type="text" ref={textInputSecond}></input>
                 </div>
             </div>
             <div className={second?secondActive:classes.secondStep}>

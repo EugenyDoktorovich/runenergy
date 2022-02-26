@@ -5,14 +5,23 @@
   right: 0;
   text-align: center;
   width: 200px;
-  height: 50px;
-  padding: 5px;
-  border: #00ff6a 3px solid;
-  color: green;
+
+  padding: 9px;
+  border: #c0dbf5 3px solid;
+  color: #1277d3;
+  background-color: #fff;
   transition: all 0.5s ease 0s;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .wrapper.active {
-  display: block;
+  display: flex;
+  flex-direction: row;
   transition: all 0.5s ease 0s;
+}
+
+.imgSuccess {
+  max-width: 40px;
 }

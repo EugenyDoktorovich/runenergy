@@ -31,6 +31,7 @@
   flex-direction: row;
   align-items: center;
   margin-top: 20px;
+  margin-left: 20px;
 }
 
 .button {
@@ -79,4 +80,5 @@
 
 .sellerIdPar {
   color: #1277d3;
+  margin-right: 20px;
 }
