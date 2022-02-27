@@ -26,9 +26,9 @@ function OzoneSettings() {
         <div className='wrapper'>
             <div>
                 {(ozoneMagazines.length!=0) && ozoneMagazines.map(id =>{
-                    return <NavLink to={`${id}`}  className={({ isActive }) =>
+                    return <NavLink to={`${id[0]}`}  className={({ isActive }) =>
                     isActive ? 'addMagazine active' : 'addMagazine'
-                  }>{id}</NavLink> 
+                  }>{`Магазин ${id[0]}`}</NavLink> 
                 })}
                 <Link  to="addmagazine" className='addMagazineLink'><Button variant="contained" className='addMagazine'>Добавить магазин</Button></Link>
                  </div> 
@@ -36,7 +36,7 @@ function OzoneSettings() {
 
             <Routes>
             {(ozoneMagazines.length!=0) && ozoneMagazines.map(id =>{
-                    return <Route path={`${id}/*`} element={<MagazineMenu/>}/>
+                    return <Route path={`${id[0]}/*`} element={<MagazineMenu/>}/>
                 })}
                 <Route path="addmagazine" element={<SellerIdSettings/>}/>
             </Routes>

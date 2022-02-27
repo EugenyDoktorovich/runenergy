@@ -26,6 +26,9 @@ function MagazineMenu() {
                 <NavLink to="seal" className={({ isActive }) =>
                     isActive ? 'magazineMenuNavlink active' : 'magazineMenuNavlink'
                   }>&#9658; Печать</NavLink>
+                <NavLink to="deletemagazine" className={({ isActive }) =>
+                    isActive ? 'magazineMenuNavlink active' : 'magazineMenuNavlink'
+                  }>&#9658; Удалить магазин</NavLink> 
             </div>
             <div className='contentWrapper'>
                 <Routes>

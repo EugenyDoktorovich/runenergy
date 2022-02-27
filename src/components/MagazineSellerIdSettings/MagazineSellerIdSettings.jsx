@@ -8,11 +8,11 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
 
-import classes from './SellerIdSettings.module.css';
+import classes from './MagazineSellerIdSettings.module.css';
 
 /* <button  className={classes.button} onClick={addOzoneID}>{disabled !== null ? "Редактировать параметры" : "Сохранить"}</button> */
 
-function SellerIdSettings() {
+function MagazineSellerIdSettings() {
    const navigate = useNavigate();
  /* Логика диспатча для отображения ozonid у Link */
     const dispatch = useDispatch();
@@ -46,11 +46,12 @@ function SellerIdSettings() {
     }
 
 
-    let nextId = {
+
+   /*  let nextId() = {
         id:newMagazineInfo,
         token:newMagazineInfo
     }
-   
+     */
 
     /* Через хук в обход редакс */
     const firstClick = () => {
