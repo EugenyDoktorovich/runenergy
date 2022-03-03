@@ -48,7 +48,7 @@ function Loginpage({loginHandler}){
             <h1 className={classes.title}>Авторизация</h1>
             <form className={classes.authForm} action="">
                 <input onInput={showInput} className={classes.firstInput} type="text" />
-                <input onInput={showInputSecond} className={classes.secondInput} type="text" />
+                <input onInput={showInputSecond} className={classes.secondInput} type="password" />
             </form>
             <Button variant="contained" onClick={succesLogin}>ВОЙТИ</Button>
         </div>

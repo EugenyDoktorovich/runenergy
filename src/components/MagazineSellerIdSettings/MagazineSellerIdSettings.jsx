@@ -9,6 +9,7 @@ import Button from '@mui/material/Button';
 
 
 import classes from './MagazineSellerIdSettings.module.css';
+import SettingsComplete from '../SettingsComplete/SettingsComplete'
 
 /* <button  className={classes.button} onClick={addOzoneID}>{disabled !== null ? "Редактировать параметры" : "Сохранить"}</button> */
 
@@ -53,11 +54,29 @@ function MagazineSellerIdSettings() {
     }
      */
 
-    /* Через хук в обход редакс */
+    /* Логика всплывающего окна */
+    const dispatch = useDispatch();
+
+    const active = useSelector(state=>state.settingsCompleteWindow);
+
+
+
+    
+
+    const addActive = () => {
+        dispatch({type:"SET_SETTINGSCOMPLETEWINDOW_ACTIVE", settingsCompleteWindow:true});
+    }
+
+    const addDisactive = () =>{
+        dispatch({type:"SET_SETTINGSCOMPLETEWINDOW_DISACTIVE", settingsCompleteWindow:false});
+    }
     const firstClick = () => {
         pushOzoneMagazine();
+        addActive();
+        setTimeout(addDisactive, 4000);
         setFirst(false);
         setSecond(true);
+        
         
     }
 
@@ -81,6 +100,11 @@ function MagazineSellerIdSettings() {
     const [second,setSecond] = useState(false);
     const [third,setThird] = useState(false);
     
+
+
+    
+
+
     return (
         <div className={classes.wrapper}>
             <div className={first?classes.firstStep:firstDisactive}>
@@ -102,6 +126,7 @@ function MagazineSellerIdSettings() {
                 НАСТРОЙКА ЗАКАЗОВ
                 <Button variant="contained" onClick={thirdClick}  className={classes.button} >Сохранить</Button>
             </div>
+            <SettingsComplete/>
         </div>
     )
 }

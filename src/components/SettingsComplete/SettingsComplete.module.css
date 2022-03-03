@@ -1,0 +1,27 @@
+.wrapper {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  width: 200px;
+
+  padding: 9px;
+  border: #c0dbf5 3px solid;
+  color: #1277d3;
+  background-color: #fff;
+  transition: all 0.5s ease 0s;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.wrapper.active {
+  display: flex;
+  flex-direction: row;
+  transition: all 0.5s ease 0s;
+}
+
+.imgSuccess {
+  max-width: 40px;
+}

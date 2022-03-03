@@ -9,6 +9,7 @@ import Zaglushka from "../Zaglushka/Zaglushka";
 
 import UserDropDownMenu from "../UserDropDownMenu/UserDropDownMenu";
 import SettingsSuccessWindow from "../SettingsSuccessWindow/SettingsSuccessWindow";
+import SettingsComplete from "../SettingsComplete/SettingsComplete";
 
 function Main() {  
     return (
@@ -20,6 +21,7 @@ function Main() {
             </Routes>
             <UserDropDownMenu/>
             <SettingsSuccessWindow/>
+            
 
                  
         

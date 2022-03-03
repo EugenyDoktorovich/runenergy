@@ -23,6 +23,7 @@ const defaultState = {
 
   active:false,
   succesLoginWindow:false,
+  settingsCompleteWindow:false,
   
   ozoneMagazinesData : [],
   wildberriesMagazinesData : [],
@@ -53,6 +54,13 @@ const reducer = (state = defaultState, action) => {
 
       case "SET_SUCCESLOGIN_DISACTIVE":
           return {...state,succesLoginWindow:false}
+
+
+      case "SET_SETTINGSCOMPLETEWINDOW_ACTIVE":
+          return {...state,settingsCompleteWindow:true}
+  
+      case "SET_SETTINGSCOMPLETEWINDOW_DISACTIVE":
+          return {...state,settingsCompleteWindow:false}
           
       
 
