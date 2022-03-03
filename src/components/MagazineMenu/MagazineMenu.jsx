@@ -5,6 +5,7 @@ import  './MagazineMenu.css';
 
 import Zaglushka from "../Zaglushka/Zaglushka";
 import SellerIdSettings from "../SellerIdSettings/SellerIdSettings";
+import OzoneSettingsFromMagazine from "../OzoneSettingsFromMagazine/OzoneSettingsFromMagazine";
 
 function MagazineMenu() {
     return (
@@ -32,7 +33,7 @@ function MagazineMenu() {
             </div>
             <div className='contentWrapper'>
                 <Routes>
-                    <Route path="sellerIdpersonal" element={<SellerIdSettings/>}/>
+                    <Route path="sellerIdpersonal" element={<OzoneSettingsFromMagazine />}/>
                     <Route path="productsettings" element={<Zaglushka/>}/>
                     <Route path="ordersettings" element={<Zaglushka/>}/>
                     <Route path="eventlog" element={<Zaglushka/>}/>

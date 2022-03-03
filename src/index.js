@@ -59,6 +59,11 @@ const reducer = (state = defaultState, action) => {
       case "PUSH_OZONE_MAGAZINE":
           return {...state, ozoneMagazinesData:[...state.ozoneMagazinesData, action.data]}
 
+      case "UPDATE_OZONE_MAGAZINE":
+          return {...state, ozoneMagazinesData:[action.data]}
+
+
+
       case "PUSH_WILDBERRIES_MAGAZINE":
           return {...state, wildberriesMagazinesData:[...state.wildberriesMagazinesData, action.data]}
 
@@ -83,7 +88,7 @@ const store = createStore(reducer);
 const unsubscribe = store.subscribe(() => console.log(store.getState()));
 
 
-/*REDUX ЛОГИКА ТУТ ПОКА ЧТО */
+/*REDUX ЛОГИКА  */
 
 
 

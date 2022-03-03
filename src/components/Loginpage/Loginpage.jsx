@@ -27,17 +27,28 @@ function Loginpage({loginHandler}){
     }
 
     const succesLogin = () => {
+        if(loginUser=='runenergy' && passwordUser=='12345'){
         loginHandler();
         addActive();
-        setTimeout(addDisactive, 4000);
+        setTimeout(addDisactive, 4000);}
+    }
+     
+    let loginUser = '';
+    const showInput = (event) => {
+        loginUser = event.target.value;
+    }
+
+    let passwordUser = '';
+    const showInputSecond = (event) => {
+        passwordUser = event.target.value;
     }
 
     return (
         <div className={classes.wrapper}>
             <h1 className={classes.title}>Авторизация</h1>
             <form className={classes.authForm} action="">
-                <input className={classes.firstInput} type="text" />
-                <input className={classes.secondInput} type="text" />
+                <input onInput={showInput} className={classes.firstInput} type="text" />
+                <input onInput={showInputSecond} className={classes.secondInput} type="text" />
             </form>
             <Button variant="contained" onClick={succesLogin}>ВОЙТИ</Button>
         </div>
