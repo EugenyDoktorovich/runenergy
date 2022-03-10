@@ -22,6 +22,14 @@ function OzoneSettingsFromMagazine() {
     let textIput = React.createRef();
     let textInputSecond = React.createRef();
 
+    const addActive = () => {
+        dispatch({type:'SET_SETTINGSCOMPLETEWINDOW_ACTIVE',settingsCompleteWindow:true});
+    }
+
+    const addDisactive = () => {
+        dispatch({type:'SET_SETTINGSCOMPLETEWINDOW_DISACTIVE',settingsCompleteWindow:false});
+    }
+
     
     
 
@@ -55,6 +63,8 @@ function OzoneSettingsFromMagazine() {
     /* Через хук в обход редакс */
     const firstClick = () => {
         pushOzoneMagazine();
+        addActive();
+        setTimeout(addDisactive,4000);
         setFirst(false);
         setSecond(true);
         
@@ -79,6 +89,10 @@ function OzoneSettingsFromMagazine() {
     const [first,setFirst] = useState(true);
     const [second,setSecond] = useState(false);
     const [third,setThird] = useState(false);
+
+    const ozoneMagazinesLength = useSelector(state=>state.ozoneMagazinesData.length);
+    console.log(ozoneMagazinesLength);
+
 
     const firstInputValue = useSelector(state=>state.ozoneMagazinesData[0][0]);
     const secondInputValue = useSelector(state=>state.ozoneMagazinesData[0][1]);

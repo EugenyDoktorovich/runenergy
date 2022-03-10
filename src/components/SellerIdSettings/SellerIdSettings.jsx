@@ -22,6 +22,15 @@ function SellerIdSettings() {
     let textIput = React.createRef();
     let textInputSecond = React.createRef();
 
+
+    const addActive = () => {
+        dispatch({type:'SET_SETTINGSCOMPLETEWINDOW_ACTIVE',settingsCompleteWindow:true});
+    }
+
+    const addDisactive = () => {
+        dispatch({type:'SET_SETTINGSCOMPLETEWINDOW_DISACTIVE',settingsCompleteWindow:false});
+    }
+
     
     
 
@@ -31,6 +40,7 @@ function SellerIdSettings() {
             return
         }
         dispatch({type:'PUSH_OZONE_MAGAZINE',data:[newMagazineInfo,newMagazinInfoSecond]});
+        
         navigate(`/forauthuser/ozonesettings/${newMagazineInfo}`)
         textIput.current.value='';
     }
@@ -55,6 +65,8 @@ function SellerIdSettings() {
     /* Через хук в обход редакс */
     const firstClick = () => {
         pushOzoneMagazine();
+        addActive();
+        setTimeout(addDisactive,4000);
         setFirst(false);
         setSecond(true);
         

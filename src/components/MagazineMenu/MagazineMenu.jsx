@@ -38,6 +38,7 @@ function MagazineMenu() {
                     <Route path="ordersettings" element={<Zaglushka/>}/>
                     <Route path="eventlog" element={<Zaglushka/>}/>
                     <Route path="seal" element={<Zaglushka/>}/>
+                    <Route path="deletemagazine" element={<Zaglushka/>}/>
                 </Routes>
             </div>
         

@@ -17,8 +17,8 @@ import Skladsettings from "../Skladsettings/Skladsettings";
 function Leftheader(){
     return (
         <div className={classes.leftheader}>
-            <img src={logotype} alt="логотип"/>
-            <Skladsettings/>
+            {/* <img src={logotype} alt="логотип"/> */}
+            {/* <Skladsettings/> */}
             <Ozone/>
             <Wildberries/>
             <Aliexpress/>
