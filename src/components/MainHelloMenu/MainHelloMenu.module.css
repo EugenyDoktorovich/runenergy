@@ -1,4 +1,48 @@
 .wrapper{
   display: flex;
   flex-direction: row;
+  padding-top: 10%;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.title{
+  color: #1d293f;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.titleSecond{
+  color: #1d293f;
+  font-size: 31px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.titleThird{
+  color: #1d293f;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.info{
+  max-width: 50%;
+}
+
+.picture{
+  min-width: 40%;
+  min-height: 400px;
+  background-image: url('../../img/HelloMenuImage.jpg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 20px;
+  
+
+}
+
+.colorFilter{
+  color: #4cceac;
 }
